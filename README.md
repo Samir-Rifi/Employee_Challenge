@@ -12,11 +12,12 @@ The purpose of the analysis is to help Bobby’s manager prepare for the “silv
 - While senior employees account for a little more than 2/3 of the total employees, the number of individuals eligible to mentorship program amongst this population account only for almost half of
 - Eligible individuals, and none of the eligible employees is in a managerial position.
 
-## ## Results:
+## SUMMARY:
 
 - There is a total of 1,549 employees that will need to be replaced as the “silver Tsunami” will start to make an impact. 
 - The additional table below is showing how this number is distributed among the different job titles/function, which provides very useful insight in preparing for the silver tsunami”:
 ![](summary1.png)
+
 The SQL Query used for this table is:
 
 		select count(title) count_title, title
@@ -29,7 +30,9 @@ The SQL Query used for this table is:
 - This suggest that there might not be enough senior members to mentor the next generation of Pewlett Hackard employees.
 - The table below is showing the % of eligible employees to mentorship program in each department/ for each job title and will be very useful for the management to prepare for the “silver Tsunami”, by shading the light on job titles where there is a the biggest gap.
 ![](summary2.png)
+
 The SQL Query used for this table is:
+
 		select count(mentorship_eligibilty.title) count_eligible, retiring_titles.title,
 		retiring_titles.count
 		from mentorship_eligibilty
